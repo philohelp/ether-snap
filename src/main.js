@@ -12,10 +12,11 @@ import {
     "<GROUP_ID>",
   ]);
   session.applyLens(lenses[0]);
-  let mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
+  let mediaStream = await navigator.mediaDevices.getUserMedia({
+    video: { facingMode: "environment" },
+  });
   const source = await createMediaStreamSource(mediaStream, {
-    transform: Transform2D.MirrorX,
-    cameraType: "front",
+    cameraType: "back",
   });
   await session.setSource(source);
   session.source.setRenderSize(window.innerWidth, window.innerHeight);
