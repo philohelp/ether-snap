@@ -1,0 +1,15 @@
+{
+  "name": "ether_snap",
+  "version": "1.0.0",
+  "description": "Le projet ether avec snap",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@snap/camera-kit": "^0.15.0",
+    "lodash": "^4.17.21"
+  }
+}
